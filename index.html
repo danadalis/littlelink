@@ -37,6 +37,9 @@
     <!-- Brand Styles -->
     <link rel="stylesheet" href="css/brands.css">
 
+    <!-- Own additions -->
+    <link rel="stylesheet" href="css/custom.css">
+
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -117,9 +120,6 @@
         <!-- Website | peyya.dev -->
         <a class="button button-default" href="https://peyya.dev" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/generic-website.svg" alt="Website Icon">peyya.dev</a><br>
 
-        <!-- Website | motorcykeldelar.se -->
-        <a class="button button-default" href="https://motorcykeldelar.se" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/generic-website.svg" alt="Website Icon">motorcykeldelar.se</a><br>
-
         <!-- Cal.com -->
         <a class="button button-cal" href="https://cal.com/danadalis" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/cal.svg" alt="Cal.com Logo">Boka ett möte med mig</a><br>
 
@@ -153,7 +153,7 @@
         <a class="button button-snapchat" href="https://snapchat.com/add/danadalis" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/snapchat.svg" alt="Snapchat Logo">Snapchat</a><br>
 
         <!-- Spotify -->
-        <a class="button button-spotify" href="https://open.spotify.com/user/danadalis" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/spotify.svg" alt="Spotify Logo">Spotify</a><br>
+        <a class="button button-spotify" href="https://open.spotify.com/user/dana_dalis" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/spotify.svg" alt="Spotify Logo">Spotify</a><br>
 
         <!-- Threads -->
         <a class="button button-threads" href="https://www.threads.com/@danadalis" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/threads.svg" alt="Threads Logo">Threads</a><br>
@@ -162,17 +162,14 @@
         <a class="button button-whatsapp" href="https://wa.me/46736404158" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/whatsapp.svg" alt="WhatsApp Logo">WhatsApp</a><br>
 
         <!-- Generic Email -->
-        <a class="button button-default" href="mailto:danadalis@icloud.com" role="button"><img class="icon" aria-hidden="true" src="images/icons/generic-email.svg" alt="Email Icon">Mejla mig</a><br>
+        <a class="button button-default" href="mailto:danadalis@icloud.com" data-copy="danadalis@icloud.com" role="button"><img class="icon" aria-hidden="true" src="images/icons/generic-email.svg" alt="Email Icon">Mejla mig</a><br>
 
         <!-- Generic SMS -->
-        <a class="button button-default" href="sms:+46736404158" role="button"><img class="icon" aria-hidden="true" src="images/icons/generic-sms.svg" alt="SMS Icon">Skicka mig ett sms</a><br>
+        <a class="button button-default" href="sms:+46736404158" data-copy="073-640 41 58" role="button"><img class="icon" aria-hidden="true" src="images/icons/generic-sms.svg" alt="SMS Icon">Skicka mig ett sms</a><br>
         <br>
-        <!-- 
-            Footer:
-            This also includes a link to the LittleLink repository to make forking LittleLink easier.
-            You can edit or remove anything here to make your own footer.
-        -->
-        <p>Bygg din egen sida med <a href="https://littlelink.io" target="_blank" rel="noopener" role="button">LittleLink</a>.</p>
+
+        <!-- Confirmation shown by the contact buttons, see script below -->
+        <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
       </div>
     </div>
@@ -180,6 +177,33 @@
 
   <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- Contact buttons
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script>
+    // mailto: and sms: links silently do nothing on devices without a matching app,
+    // so the contact buttons also copy their value and confirm it on screen.
+    document.querySelectorAll('[data-copy]').forEach(function (link) {
+      link.addEventListener('click', function () {
+        var value = link.getAttribute('data-copy');
+        var toast = document.getElementById('toast');
+        function show(text) {
+          toast.textContent = text;
+          toast.classList.add('show');
+          clearTimeout(toast.timer);
+          toast.timer = setTimeout(function () { toast.classList.remove('show'); }, 3500);
+        }
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(value).then(
+            function () { show(value + ' – kopierat'); },
+            function () { show(value); }
+          );
+        } else {
+          show(value);
+        }
+      });
+    });
+  </script>
+
 </body>
 
 </html>
