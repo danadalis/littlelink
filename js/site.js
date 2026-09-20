@@ -81,9 +81,10 @@
       weeks = [];
       for (let i = 0; i < cells.length; i += 7) weeks.push(cells.slice(i, i + 7));
 
-      total.textContent = data.total && data.total.lastYear != null
+      const sum = data.total && data.total.lastYear != null
         ? data.total.lastYear
-        : days.reduce((sum, day) => sum + day.count, 0);
+        : days.reduce((acc, day) => acc + day.count, 0);
+      total.textContent = sum.toLocaleString('sv-SE'); // "1 644", with a non-breaking space
 
       block.hidden = false;
       render();
