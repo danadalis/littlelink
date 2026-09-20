@@ -1,11 +1,3 @@
-  <!-- 
-    
-  Version 2.5.0 
-  
-  This is to help you track what version of LittleLink you forked.
-
-  -->
-  
 <!DOCTYPE html>
 <html lang="sv">
 
@@ -17,177 +9,241 @@
   <title>Daniel Dahlström</title>
   <meta name="description" content="Daniel Dahlström – mina sajter, projekt och sociala kanaler.">
   <meta name="author" content="Daniel Dahlström">
-
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f2ec">
 
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://danadalis.se/">
+  <meta property="og:title" content="Daniel Dahlström">
+  <meta property="og:description" content="Mina sajter, projekt och sociala kanaler.">
+
+  <!-- Fonts | same families as opengym.se
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,100..900&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-
-    <!-- Themes:
-            Auto:   css/skeleton-auto.css
-            Light:  css/skeleton-light.css
-            Dark:   css/skeleton-dark.css
-     -->
-    <link rel="stylesheet" href="css/skeleton-auto.css">
-
-    <!-- Brand Styles -->
-    <link rel="stylesheet" href="css/brands.css">
-
-    <!-- Own additions -->
-    <link rel="stylesheet" href="css/custom.css">
-
+  <link rel="stylesheet" href="css/site.css">
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/avatar.png">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23121311'/%3E%3Ctext x='32' y='46' font-family='system-ui, sans-serif' font-size='40' font-weight='800' fill='%23a6ff1f' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E">
 
 </head>
 
 <body>
 
-  <!-- Primary Page Layout
+  <!-- Top bar
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <div class="row">
-      <div class="column" style="margin-top: 10%">
+  <header class="top">
+    <div class="container top-inner">
+      <a href="#" class="mark" aria-label="danadalis, till toppen">
+        <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <rect width="64" height="64" rx="12" fill="#121311"/>
+          <text x="32" y="46" font-family="Anybody, system-ui, sans-serif" font-size="40" font-weight="800" fill="#a6ff1f" text-anchor="middle">D</text>
+        </svg>
+        danadalis
+      </a>
+      <span class="top-meta">danadalis.se</span>
+    </div>
+  </header>
 
-        <!-- 
+  <main>
 
-          ## Getting Started with LittleLink
+    <!-- Hero
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <section class="hero">
+      <div class="container">
+        <p class="hero-label">Sajter · kod · kanaler</p>
+        <!-- Your Image Here | The image removes itself if images/avatar.png is missing. -->
+        <img src="images/avatar.png" class="avatar" alt="Porträtt av Daniel Dahlström" width="88" height="88" onerror="this.remove()">
+        <h1>Daniel <em>Dahlström.</em></h1>
+        <p class="lede">Mina sajter, projekt och sociala kanaler.</p>
+      </div>
+    </section>
 
-          This page has been built with every pre-designed button available in LittleLink by default. You can rearrange and delete as needed.
+    <!-- Sites | previews are 1200x630 in images/sites/
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <section class="block" id="sajter">
+      <div class="container">
+        <p class="section-label">Sajter</p>
+        <div class="tiles sites">
 
-          You can add your own brand or others brands you may need in the `css/brands.css` file. 
+          <a class="tile" href="https://opengym.se" target="_blank" rel="noopener">
+            <img class="site-shot" src="images/sites/opengym.jpg" alt="" width="1200" height="630" loading="lazy">
+            <span class="tile-body">
+              <span class="tile-name">opengym.se</span>
+              <span class="tile-kind">Plattform för boxar</span>
+              <span class="tile-desc">Fler som stannar. Färre adminkvällar.</span>
+            </span>
+          </a>
 
-          You can add custom icons to `images/icons/...`. It is recommended to use a 24x24 .SVG.
+          <a class="tile" href="https://mopeddelar.se" target="_blank" rel="noopener">
+            <img class="site-shot" src="images/sites/mopeddelar.jpg" alt="" width="1200" height="630" loading="lazy">
+            <span class="tile-body">
+              <span class="tile-name">mopeddelar.se</span>
+              <span class="tile-kind">Webbutik</span>
+              <span class="tile-desc">Veteran- och nya delar till moped, cykel och mc.</span>
+            </span>
+          </a>
 
-          Edit the "Your Image Here" section to add your own personal branding, like a picture of yourself or your brand logo!
+          <a class="tile" href="https://peyya.dev" target="_blank" rel="noopener">
+            <img class="site-shot" src="images/sites/peyya.jpg" alt="" width="1200" height="630" loading="lazy">
+            <span class="tile-body">
+              <span class="tile-name">peyya.dev</span>
+              <span class="tile-kind">Betalningar</span>
+              <span class="tile-desc">Payments that know when to move.</span>
+            </span>
+          </a>
 
-          Edit the "Title" section to change the page heading. You can use something like your name, your social handle, or your brand name.
+        </div>
+      </div>
+    </section>
 
-          Edit the "Short Bio" section tell users about yourself or your brand.
+    <!-- Code | the stat + heatmap block is filled in and shown by js/site.js
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <section class="block dark" id="kod">
+      <div class="container">
+        <p class="section-label">Kod</p>
 
-        -->
+        <div class="code-grid" id="gh-block" hidden>
+          <div>
+            <div class="stat-num" id="gh-total"></div>
+            <p class="stat-label">bidrag på GitHub det senaste året</p>
+          </div>
+          <div>
+            <div class="heat" id="gh-heat" role="img" aria-label="Bidragsgraf från GitHub, en ruta per dag"></div>
+            <div class="heat-legend" aria-hidden="true">
+              <span>Mindre</span><i></i><i class="l1"></i><i class="l2"></i><i class="l3"></i><i class="l4"></i><span>Mer</span>
+            </div>
+          </div>
+        </div>
 
-        <!-- Your Image Here | The image hides itself if images/avatar.png is missing. -->
-        <img src="images/avatar.png" class="avatar" alt="Daniel Dahlström" onerror="this.style.display='none'">
-
-        <!-- Title -->
-        <h1 role="heading">Daniel Dahlström</h1>
-
-        <!-- Short Bio -->
-        <p>Mina sajter, projekt och sociala kanaler.</p>
-
-        <!--
-
-          ## Breaking down <a> attributes:
-          
-          1.) class="button button-default" | The first "button" here is telling this <a> tag that it should make this element a button and applies the default styling in `css/brands.css`.
-          The second portion, button-default, is declaring the specific brand style you would like to apply. Here we're applying the "default" style and color.
-          If you want to make this button to use the brand colors for Discord, just change "button-default" to "button-discord". Brands are found in `css/brands.css`. You can always edit & add your own there.
-
-          2.) Replace the # in href="#" with the desired target URL for the button.
-
-          3.) target="_blank" | This attribute opens links in a new tab. Remove this attribute to prevent links from opening in a new tab.
-
-          4.) rel="noopener" | This attribute instructs the browser to navigate to the target resource without granting the new browsing context access to the document that opened it.
-          This is especially useful when opening untrusted links. https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types/noopener
-
-          5.) role="button" | The button role identifies an element as a button to assistive technology such as screen readers.
-
-          ## Breaking down the <img> attributes:
-          
-          1.) class="icon" | This class is telling the <img> tag that it should use the styling for icons found in `css/brands.css`.
-
-          2.) src="images/icons/[icon-name].svg" | This defines the icon you would like to display from the 'images/icons/' folder. For example, you can change this to src="images/icons/discord.svg" to use the Discord icon.
-          Add your own 24x24 icons to the "icons" folder to reference them. We recommend providing a SVG.
-
-          3.) alt="" | Since the text at the end of the snippet, "..>[Button Text]</a><br>", explains what the button is, we use "alt=""" to nullify the icon annoucement from the accessibility tree. 
-          This can improve the experience for assistive technology users by hiding what is essentially duplicated
-
-        -->
-
-        <!-- Website | opengym.se -->
-        <a class="button button-default" href="https://opengym.se" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/generic-website.svg" alt="Website Icon">opengym.se</a><br>
-
-        <!-- Website | mopeddelar.se -->
-        <a class="button button-default" href="https://mopeddelar.se" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/generic-website.svg" alt="Website Icon">mopeddelar.se</a><br>
-
-        <!-- Website | peyya.dev -->
-        <a class="button button-default" href="https://peyya.dev" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/generic-website.svg" alt="Website Icon">peyya.dev</a><br>
-
-        <!-- Facebook -->
-        <a class="button button-faceb" href="https://facebook.com/danadalis" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/facebook.svg" alt="Facebook Logo">Hitta mig på Facebook</a><br>
-
-        <!-- Facebook Messenger -->
-        <a class="button button-messenger" href="https://m.me/danadalis" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/messenger.svg" alt="Messenger Logo">Chatta på Messenger</a><br>
-
-        <!-- GitHub | personal -->
-        <a class="button button-github" href="https://github.com/danadalis" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/github.svg" alt="GitHub Logo">danadalis</a><br>
-
-        <!-- GitHub | Peyya organization -->
-        <a class="button button-github" href="https://github.com/peyyadotdev" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/github.svg" alt="GitHub Logo">peyyadotdev</a><br>
-
-        <!-- Instagram -->
-        <a class="button button-instagram" href="https://instagram.com/danadalis" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/instagram.svg" alt="Instagram Logo">Instagram</a><br>
-
-        <!-- LinkedIn -->
-        <a class="button button-linked" href="https://linkedin.com/in/danadalis" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/linkedin.svg" alt="LinkedIn Logo">LinkedIn</a><br>
-
-        <!-- Revolut (disabled) | A payment link: visitors can send you money via https://revolut.me/danadalis.
-             Requires a Revolut account. To enable, move the <a> line below out of this comment.
-             <a class="button button-revolut" href="https://revolut.me/danadalis" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/revolut.svg" alt="Revolut Logo">Revolut</a><br>
-        -->
-
-        <!-- Spotify -->
-        <a class="button button-spotify" href="https://open.spotify.com/user/dana_dalis" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/spotify.svg" alt="Spotify Logo">Spotify</a><br>
-
-        <!-- Threads -->
-        <a class="button button-threads" href="https://www.threads.com/@danadalis" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/threads.svg" alt="Threads Logo">Threads</a><br>
-
-        <!-- Generic Email -->
-        <a class="button button-default" href="mailto:danadalis@icloud.com" data-copy="danadalis@icloud.com" role="button"><img class="icon" aria-hidden="true" src="images/icons/generic-email.svg" alt="Email Icon">Mejla mig</a><br>
-        <br>
-
-        <!-- Confirmation shown by the contact buttons, see script below -->
-        <div id="toast" class="toast" role="status" aria-live="polite"></div>
+        <div class="tiles cols-2">
+          <a class="tile channel" href="https://github.com/danadalis" target="_blank" rel="noopener">
+            <span class="tile-body">
+              <span class="icon" style="--icon: url(/images/icons/github.svg)" aria-hidden="true"></span>
+              <span>
+                <span class="tile-name">danadalis</span>
+                <span class="tile-kind">GitHub · personligt</span>
+              </span>
+            </span>
+          </a>
+          <a class="tile channel" href="https://github.com/peyyadotdev" target="_blank" rel="noopener">
+            <span class="tile-body">
+              <span class="icon" style="--icon: url(/images/icons/github.svg)" aria-hidden="true"></span>
+              <span>
+                <span class="tile-name">peyyadotdev</span>
+                <span class="tile-kind">GitHub · Peyya</span>
+              </span>
+            </span>
+          </a>
+        </div>
 
       </div>
-    </div>
-  </div>
+    </section>
 
-  <!-- End Document
+    <!-- Channels
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <section class="block" id="kanaler">
+      <div class="container">
+        <p class="section-label">Kanaler</p>
+        <div class="tiles channels">
+
+          <a class="tile channel" href="https://facebook.com/danadalis" target="_blank" rel="noopener">
+            <span class="tile-body">
+              <span class="icon" style="--icon: url(/images/icons/facebook.svg)" aria-hidden="true"></span>
+              <span>
+                <span class="tile-name">Facebook</span>
+                <span class="tile-kind">danadalis</span>
+              </span>
+            </span>
+          </a>
+
+          <a class="tile channel" href="https://m.me/danadalis" target="_blank" rel="noopener">
+            <span class="tile-body">
+              <span class="icon" style="--icon: url(/images/icons/messenger.svg)" aria-hidden="true"></span>
+              <span>
+                <span class="tile-name">Messenger</span>
+                <span class="tile-kind">Chatta med mig</span>
+              </span>
+            </span>
+          </a>
+
+          <a class="tile channel" href="https://instagram.com/danadalis" target="_blank" rel="noopener">
+            <span class="tile-body">
+              <span class="icon" style="--icon: url(/images/icons/instagram.svg)" aria-hidden="true"></span>
+              <span>
+                <span class="tile-name">Instagram</span>
+                <span class="tile-kind">@danadalis</span>
+              </span>
+            </span>
+          </a>
+
+          <a class="tile channel" href="https://linkedin.com/in/danadalis" target="_blank" rel="noopener">
+            <span class="tile-body">
+              <span class="icon" style="--icon: url(/images/icons/linkedin.svg)" aria-hidden="true"></span>
+              <span>
+                <span class="tile-name">LinkedIn</span>
+                <span class="tile-kind">in/danadalis</span>
+              </span>
+            </span>
+          </a>
+
+          <a class="tile channel" href="https://open.spotify.com/user/dana_dalis" target="_blank" rel="noopener">
+            <span class="tile-body">
+              <span class="icon" style="--icon: url(/images/icons/spotify.svg)" aria-hidden="true"></span>
+              <span>
+                <span class="tile-name">Spotify</span>
+                <span class="tile-kind">dana_dalis</span>
+              </span>
+            </span>
+          </a>
+
+          <a class="tile channel" href="https://www.threads.com/@danadalis" target="_blank" rel="noopener">
+            <span class="tile-body">
+              <span class="icon" style="--icon: url(/images/icons/threads.svg)" aria-hidden="true"></span>
+              <span>
+                <span class="tile-name">Threads</span>
+                <span class="tile-kind">@danadalis</span>
+              </span>
+            </span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact | data-copy: see js/site.js
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <section class="block" id="kontakt">
+      <div class="container">
+        <p class="section-label">Kontakt</p>
+        <h2>Hör av <em>dig.</em></h2>
+        <div class="contact-row">
+          <a class="btn-primary" href="mailto:danadalis@icloud.com" data-copy="danadalis@icloud.com">Mejla mig</a>
+          <a class="btn-text" href="mailto:danadalis@icloud.com" data-copy="danadalis@icloud.com">danadalis@icloud.com</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <!-- Contact buttons
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script>
-    // mailto: and sms: links silently do nothing on devices without a matching app,
-    // so the contact buttons also copy their value and confirm it on screen.
-    document.querySelectorAll('[data-copy]').forEach(function (link) {
-      link.addEventListener('click', function () {
-        var value = link.getAttribute('data-copy');
-        var toast = document.getElementById('toast');
-        function show(text) {
-          toast.textContent = text;
-          toast.classList.add('show');
-          clearTimeout(toast.timer);
-          toast.timer = setTimeout(function () { toast.classList.remove('show'); }, 3500);
-        }
-        if (navigator.clipboard) {
-          navigator.clipboard.writeText(value).then(
-            function () { show(value + ' – kopierat'); },
-            function () { show(value); }
-          );
-        } else {
-          show(value);
-        }
-      });
-    });
-  </script>
+  <footer>
+    <div class="container footer-inner">
+      <span>© 2026 Daniel Dahlström</span>
+      <a href="#">Till toppen ↑</a>
+    </div>
+  </footer>
+
+  <!-- Confirmation shown by the contact links, see js/site.js -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/site.js"></script>
 
 </body>
 
