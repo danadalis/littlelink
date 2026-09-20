@@ -337,7 +337,7 @@ section.dark {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .code-grid {
   display: grid;
-  grid-template-columns: 220px minmax(0, 1fr);
+  grid-template-columns: max-content minmax(0, 1fr); /* the stat column follows the number's width */
   gap: 48px;
   align-items: end;
   margin-bottom: 48px;
